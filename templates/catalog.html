@@ -1,10 +1,37 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="bg">
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+<meta charset="UTF-8" />
+<title>Каталог</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
-
+<h2>Каталог с обувки</h2>
+{% if 'username' in session %}
+<p>Здравей, {{ session['username'] }} | <a href="{{ url_for('logout') }}">Изход</a></p>
+{% else %}
+<p><a href="{{ url_for('login') }}">Вход</a> | <a href="{{ url_for('register') }}">Регистрация</a></p>
+{% endif %}
+<div class="products">
+{% for product in products %}
+<div class="product">
+<h3>{{ product.name }}</h3>
+<p>{{ product.description }}</p>
+<p>Цвят: {{ product.color }}</p>
+<p>Размер: {{ product.size }}</p>
+<p>Цена: {{ product.price }} лв.</p>
+<p>Наличност: {{ product.stock }}</p>
+{% if product.stock > 0 %}
+<a href="{{ url_for('add_to_cart', product_id=product.id) }}" class="hover-btn">Добави в кошницата</a>
+{% else %}
+<p>Изчерпано</p>
+{% endif %}
+</div>
+{% endfor %}
+</div>
+<a href="{{ url_for('view_cart') }}">Към кошницата</a>
+{% if 'username' in session and session['username'] == 'admin' %}
+<p><a href="{{ url_for('admin') }}">Админ панел</a></p>
+{% endif %}
 </body>
 </html>

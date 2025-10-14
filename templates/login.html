@@ -1,10 +1,88 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="bg">
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Вход</title>
+<style>
+  body {
+    margin: 0;
+    height: 100vh;
+    background-color: #007bff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, sans-serif;
+  }
+
+  .form-container {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    backdrop-filter: blur(10px);
+    width: 300px;
+  }
+
+  h2 {
+    color: white;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  input[type="text"],
+  input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 5px;
+  }
+
+  button {
+    width: 100%;
+    padding: 12px;
+    background-color: white;
+    color: #007bff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+
+  button:hover {
+    background-color: #f0f0f0;
+  }
+
+  .links {
+    margin-top: 15px;
+    text-align: center;
+  }
+
+  .links a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+  }
+
+  .links a:hover {
+    text-decoration: underline;
+  }
+</style>
 </head>
 <body>
-
+  <div class="form-container">
+    <h2>Вход</h2>
+    <form>
+      <input type="text" placeholder="Потребителско име" required />
+      <input type="password" placeholder="Парола" required />
+      <button type="submit">Влез</button>
+    </form>
+    <div class="links">
+      <a href="index.html">Начало</a>
+      <a href="register.html">Регистрация</a>
+    </div>
+  </div>
 </body>
 </html>

@@ -1,10 +1,61 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="bg">
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Добре дошли</title>
+<style>
+  body {
+    margin: 0;
+    height: 100vh;
+    background-color: #007bff; /* син фон */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, sans-serif;
+  }
+
+  .container {
+    text-align: center;
+  }
+
+  h1 {
+    color: white;
+    font-size: 3em;
+    margin-bottom: 30px;
+  }
+
+  .buttons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+  }
+
+  .buttons a {
+    padding: 15px 30px;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: white;
+    background-color: transparent;
+    border: 2px solid white;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background-color 0.3s, color 0.3s;
+  }
+
+  .buttons a:hover {
+    background-color: white;
+    color: #007bff;
+  }
+</style>
 </head>
 <body>
-
+  <div class="container">
+    <h1>Добре дошли в Sike</h1>
+    <div class="buttons">
+      <a href="login.html">Вход</a>
+      <a href="register.html">Регистрация</a>
+    </div>
+  </div>
 </body>
 </html>

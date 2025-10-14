@@ -1,0 +1,52 @@
+body {
+    background-color: #007BFF; /* син цвят */
+    color: #fff; /* бял текст за контраст */
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Заглавието да е центрирано в горната част */
+header h1 {
+    font-size: 2.5em;
+    padding: 20px;
+    margin: 0;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* Централна част с бутоните */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex: 1;
+}
+
+/* Стил за големите бутони с ефект hover */
+.hover-btn {
+    display: inline-block;
+    padding: 15px 30px;
+    margin: 20px;
+    font-size: 1.2em;
+    font-weight: bold;
+    background-color: transparent;
+    border: 3px solid #fff;
+    color: #fff;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.hover-btn:hover {
+    background-color: #fff;
+    color: #007BFF;
+    box-shadow: 0 0 10px #fff;
+}
